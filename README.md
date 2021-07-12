@@ -1,5 +1,5 @@
 # Inventory-Management-Tool-Using-Python
-A tool created using pyhon which enables user to register and access the inventory data.
+A tool created using python which enables user to register and access the inventory data.
 Using Computer Vision, file handling and basic GUI (tkinter), the tool can register the new product and its status by scanning its barcode.
 The tool can create new CSV file for feeding the barcode data. Also it can import the existing CSV barcode data file, this enables user to continue with same data file.
 The tool reads the barcode of the product, feeds it into CSV file along with the current date and time.
