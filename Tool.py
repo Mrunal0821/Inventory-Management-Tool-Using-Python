@@ -90,15 +90,16 @@ def barcode(flag):
 
 
 def Enterdata():
-    var=IntVar()
+    input = "input00"
     def flag():
         def next():
-            flag1 = str(var.get())
-            if (flag1 == "Inbound Transaction"):
-                flag1="IN"
+            flag1 = str(et12.get())
+            print(flag1)
+            if (flag1 == "IN"):
+                #flag1="IN"
                 barcode(flag1)
-            else:
-                flag1="OUT"
+            elif(flag1 == "OUT"):
+                #flag1="OUT"
                 barcode(flag1)
 
         subbt11 = Button(subwin, text = "NEXT",font = ("Times New Roman", 12), command =next )
@@ -111,11 +112,11 @@ def Enterdata():
     subwin.title("Transaction Type")
     subl1 = Label(subwin, text = "Specify the Type of Transaction - Inbound / Outbound", font = ("Times New Roman", 15))
     subl1.grid (row= 1,column =1, columnspan =2)
-    r1 = Radiobutton(subwin, text="Inbound Transaction", font = ("Times New Roman", 12),variable =var , value =1, command = flag)
-    r1.grid(row=2, column=1)
-    r2 = Radiobutton(subwin, text="Outbound Transaction", font=("Times New Roman", 12),variable =var, value=2, command=flag)
-    r2.grid(row=2, column=2)
-
+    L1 = Label(subwin, text="Transaction Type - 'IN'/'OUT'", font = ("Times New Roman", 12))
+    L1.grid(row=2, column=1)
+    et12 = Entry(subwin, width = 15)
+    et12.grid(row=2, column=2)
+    flag()
     mainloop()
 def Getstats():
     with open(gpath) as file:
